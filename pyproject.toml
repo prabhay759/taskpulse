@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taskpulse"
+version = "1.0.0"
+description = "Lightweight background task monitor with live progress, ETA, hooks, concurrent tasks, and SQLite history"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "prabhay759" }]
+keywords = ["tasks", "progress", "background", "monitor", "concurrent", "sqlite"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/prabhay759/taskpulse"
+Repository = "https://github.com/prabhay759/taskpulse"
+Issues = "https://github.com/prabhay759/taskpulse/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["taskpulse*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
